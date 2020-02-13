@@ -9,5 +9,7 @@ let
 proc bubbleSort(arr: seq, n: int) =
   for i in countup(0, n):
     echo i
+    for j in countup(0, n-i):
+      echo j
 
 bubbleSort(arr, n)
