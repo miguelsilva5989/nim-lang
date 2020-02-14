@@ -14,13 +14,14 @@ randomize()
 var
   # sq: seq[int] = @[5, 1, 9, 4, 6, 2, 1, 3, 1, 2, 4, 5, 9]
   # sq = @[5, 1, 9] # also can be inferred
-  sq = toSeq(0..100) # generate 100 numbers sequence
-
-shuffle(sq) # shuffle the array
-echo "Initial array: ", sq
+  sq = toSeq(1..100) # generate 100 numbers sequence
 
 let
   n = sq.len # sequence length
+
+shuffle(sq) # shuffle the array
+echo "Initial array: ", sq
+echo "Array size: ", n
 
 proc swap(sq: var seq, pos: int) = # If the procedure needs to modify the argument for the caller, a var parameter can be used, hence the "var seq"
   let tmp: int = sq[pos]
@@ -34,9 +35,9 @@ proc bubbleSort(sq: var seq, n: int) = # If the procedure needs to modify the ar
     for j in countup(0, n-i-1):
       if sq[j] > sq[j+1]:
         inc(c) # increment swap counter
-        echo "Swap number ", c, ": ", sq[j], " with ", sq[j+1]
+        # echo "Swap number ", c, ": ", sq[j], " with ", sq[j+1]
         swap(sq, j)
-        echo "\t", sq
+        # echo "\t", sq
   echo "Total number of swaps: ", c
 
 bubbleSort(sq, n)
