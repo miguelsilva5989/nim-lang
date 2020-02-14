@@ -1,7 +1,11 @@
 # nim-lang
 
-Nim Language Tutorials
+## Nim Language Tutorials
 
-Credits for [Community Tutorials](https://narimiran.github.io/nim-basics/)
+01_basics - Credits for [Community Tutorials](https://narimiran.github.io/nim-basics/)
 
-Code examples [Code](https://github.com/narimiran/nim-basics/tree/master/code)
+- Code examples [Code](https://github.com/narimiran/nim-basics/tree/master/code)
+
+## Sorting Algorithms
+
+- Bubblesort
