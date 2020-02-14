@@ -8,16 +8,15 @@ var
 let
   n = sq.len
 
-proc swap(sq: var seq, pos: int) =
+proc swap(sq: var seq, pos: int) = # If the procedure needs to modify the argument for the caller, a var parameter can be used, hence the "var seq"
   echo "Swapping ", sq[pos], " with ", sq[pos+1]
   let tmp: int = sq[pos]
   sq[pos] = sq[pos+1]
   sq[pos+1] = tmp
 
-proc bubbleSort(sq: var seq, n: int) =
+proc bubbleSort(sq: var seq, n: int) = # If the procedure needs to modify the argument for the caller, a var parameter can be used, hence the "var seq"
   for i in countup(1, n):
     for j in countup(0, n-i-1):
-      # echo i, ",", j, " -> ", sq[j], ",", sq[j+1]
       if sq[j] > sq[j+1]:
         swap(sq, j)
         echo "\t", sq
